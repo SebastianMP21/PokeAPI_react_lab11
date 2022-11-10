@@ -11,6 +11,9 @@ const theme = createTheme({
     success: {
       main: "#8EB897",
     },
+    ghostwhite: {
+      main: "#F8F8FF",
+    }
   },
 });
 

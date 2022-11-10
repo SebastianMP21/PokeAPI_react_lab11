@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import theme from "./theme";
-import { CardPokemons, DropDown } from "./components";
+import { CardPokemons, DropDown, Particle } from "./components";
 import { ThemeProvider } from "@mui/material/styles";
 import { Container } from "@mui/material";
 import { get } from "./services";
@@ -31,12 +31,13 @@ function App() {
   };
 
   useEffect(() => {
-    // llamo a la funciona
+    // llamo a la función
     getTypes();
   }, []);
 
   return (
     <ThemeProvider theme={theme}>
+      <Particle/>
       <Container>
         <DropDown type={type} handleChange={handleChange} types={types} />
         <CardPokemons pokemons={pokemons} />
